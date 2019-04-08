@@ -4,17 +4,24 @@
 {% block title %}Flasky - Login{% endblock %}
 
 {% block page_content %}
-<div class="page-header">
-  <h1>Loginin</h1>
-</div>
-<div class="col-md-4">
-  {{ wtf.quick_form(form) }}
-  <br>
-  <p>
-    New user?
-    <a href="{{ url_for('auth.register') }}">
-      Click here to register
-    </a>
-  </p>
-</div>
+  <div class="page-header">
+    <h1>Loginin</h1>
+  </div>
+  <div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+    <br>
+    <p>
+      New user?
+      <a href="{{ url_for('auth.register') }}">
+        Click here to register
+      </a>
+    </p>
+    <br>
+    <p>
+      Forget password?
+      <a href="{{ url_for('auth.password_reset_request') }}">
+        Click here to reset
+      </a>
+    </p>
+  </div>
 {% endblock %}

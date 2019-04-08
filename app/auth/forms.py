@@ -37,7 +37,18 @@ class RegistrationForm(FlaskForm):
 class ChangePasswordForm(FlaskForm):
     old_password = PasswordField('Old password', validators=[DataRequired()])
     new_password = PasswordField('New password', validators=[DataRequired()])
-    new_password2=PasswordField('Confirm password',
-                                validators=[DataRequired(),EqualTo('new_password',
-                                            message='Password must match')])
+    new_password2 = PasswordField('Confirm password',
+                                  validators=[DataRequired(), EqualTo('new_password',
+                                                                      message='Password must match')])
     submit = SubmitField('Confirm')
+
+
+class PasswordResetRequestForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
+    submit = SubmitField('Reset password')
+
+
+class PasswordResetForm(FlaskForm):
+    password = PasswordField('New password', validators=[DataRequired()])
+    password2 = PasswordField('Confirm password', validators=[
+        DataRequired(), EqualTo('password', message='Password must match')])
