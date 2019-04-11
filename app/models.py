@@ -45,7 +45,7 @@ class Role(db.Model):
         roles = {
             'User': [Permission.FOLLOW, Permission.COMMENT, Permission.WRITE],
             'Moderator': [Permission.FOLLOW, Permission.COMMENT,
-                         Permission.WRITE, Permission.MODERATE],
+                          Permission.WRITE, Permission.MODERATE],
             'Administrator': [Permission.MODERATE, Permission.WRITE,
                               Permission.COMMENT, Permission.FOLLOW,
                               Permission.ADMIN],
