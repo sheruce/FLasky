@@ -11,7 +11,7 @@ class Config:
     MAIL_USERNAME = os.environ.get('batma52@163.com')
     MAIL_PASSWORD = os.environ.get('zxcqwe123')
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
-    FLASKY_MAIL_SENDER = 'Flasky Admin <batma52@163.com>'
+    FLASKY_MAIL_SENDER = 'Flasky Admin <sheruce221@163.com>'
     FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
