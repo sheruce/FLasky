@@ -14,6 +14,7 @@ class Config:
     FLASKY_MAIL_SENDER = 'Flasky Admin <glorsy@163.com>'
     FLASKY_ADMIN = 'glorsy@163.com'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    FLASKY_POSTS_PER_PAGE = 20
 
     @staticmethod
     def init_app(app):
