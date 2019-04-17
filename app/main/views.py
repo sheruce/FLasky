@@ -50,7 +50,7 @@ def edit_profile():
 @main.route('/edit_profile/<int:id>', methods=['GET', 'POST'])
 @login_required
 @admin_required
-def edir_profile_admin(id):
+def edit_profile_admin(id):
     user = User.query.get_or_404(id)
     form = EditProfileAdminForm(user=user)
     if form.validate_on_submit():
